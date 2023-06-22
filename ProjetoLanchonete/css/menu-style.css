@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/* Reset de estilos para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+/* Estilos gerais para o body */
+body {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Estilos para a barra de conteúdo */
+.content {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1f1e1f;
+    position: fixed;
+}
+
+/* Estilos para o logotipo na barra de conteúdo */
+.logo {
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo h3 {
+    color: white;
+    font-size: 18px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para a lista de menu na barra de conteúdo */
+.content .list-menu {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .list-menu li a {
+    padding-top: 45px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 200ms ease-in;
+}
+
+.content .list-menu li a:hover {
+    background-color: #333333;
+    border-bottom: 4px solid #ffc506;
+    color: #ffc506;
+}
+
+/* Estilos para a primeira seção */
+.first-section {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url(../img/FundoLanchonete.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-section .conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-section h1 {
+    color: #ffc506;
+    font-size: 90px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.first-section h2 {
+    color: rgb(177, 177, 177);
+    font-size: 45px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 45px;
+}
+
+.btn button {
+    /* Estilos para o botão */
+    width: 230px;
+    height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #ffc506;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    transition: all 400ms ease-in;
+    margin-top: 75px;
+    margin: 0 auto;
+}
+
+.btn button:hover {
+    /* Estilos ao passar o mouse sobre o botão */
+    border: 1px solid #ffc506;
+    background-color: transparent;
+    color: #ffc506;
+}
+
+.btn {
+    /* Estilos para o contêiner de botões */
+    width: 480px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardapio {
+    /* Estilos para a seção de cardápio */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(12, 12, 12, 0.8), rgba(15, 15, 15, 0.8)), url(../img/fundo-cardapio.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cardapio h2 {
+    /* Estilos para o título da seção de cardápio */
+    margin-top: 10px;
+    font-size: 75px;
+    color: #e6e6e6;
+    text-transform: uppercase;
+}
+
+.itens-cardapio {
+    /* Estilos para os itens do cardápio */
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 550px));
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.itens-cardapio .info {
+    /* Estilos para as informações dos itens do cardápio */
+    background-color: rgb(221, 221, 221);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 22.5px;
+}
+
+.itens-cardapio .info h3 {
+    /* Estilos para o título do item do cardápio */
+    font-size: 27px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.itens-cardapio div {
+    /* Estilos para o contêiner do item do cardápio */
+    background-color: #5e5252;
+    box-shadow: 0px 0px 4px 1px;
+}
+
+.itens-cardapio img {
+    /* Estilos para a imagem do item do cardápio */
+    width: 100%;
+    height: 300px;
+}
+
+.itens-cardapio .info .pedir {
+    /* Estilos para o botão de pedir */
+    width: 200px;
+    height: 35px;
+    margin-top: 7.5px;
+    background-color: #7b0810;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    transition: all 200ms ease-in;
+}
+
+.itens-cardapio .info .pedir:hover {
+    /* Estilos ao passar o mouse sobre o botão de pedir */
+    background-color: #5e5252;
+    color: rgb(255, 255, 255);
+}
+
+.info select {
+    /* Estilos para a seleção */
+    font-size: 20px;
+}
+
+.sobre-nos {
+    /* Estilos para a seção "Sobre Nós" */
+    background-color: #1f1e1f;
+    width: 100%;
+    padding-bottom: 75px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentsobre {
+    /* Estilos para o conteúdo da seção "Sobre Nós" */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main {
+    /* Estilos para a seção principal */
+    display: flex;
+    justify-content: space-between;
+}
+
+.sobre-nos img {
+    /* Estilos para a imagem da seção "Sobre Nós" */
+    width: 600px;
+    height: 400px;
+    margin-top: 150px;
+    margin-left: 150px;
+    border: 2px solid rgb(155, 155, 155);
+}
+
+.contentsobre h2 {
+    /* Estilos para o título da seção "Sobre Nós" */
+    font-size: 90px;
+    margin-bottom: 15px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.contentsobre p {
+    /* Estilos para o texto da seção "Sobre Nós" */
+    text-align: center;
+    font-size: 27px;
+    width: 600px;
+}
+
+.carrinho {
+    /* Estilos para o carrinho */
+    background-color: #333333;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.carrinho h2 {
+    /* Estilos para o título do carrinho */
+    font-family: 'Indie Flower', cursive;
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+#lista-carrinho {
+    /* Estilos para a lista de itens do carrinho */
+    font-size: 20px;
+    border: 2px solid white;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.total {
+    /* Estilos para o total do carrinho */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 480px;
+}
+
+.total span {
+    /* Estilos para o texto do total do carrinho */
+    font-size: 20px;
+}
+
+.popup {
+    /* Estilos para o pop-up */
+    display: none;
+    position: fixed;
+    font-family: 'Roboto', sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 29, 29, 0.5);
+}
+
+.popup-content {
+    /* Estilos para o conteúdo do pop-up */
+    font-size: 20px;
+    color: rgb(177, 177, 177);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(29, 29, 29);
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.popup-content h2 {
+    /* Estilos para o título do pop-up */
+    font-size: 40px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.close {
+    /* Estilos para o botão de fechar do pop-up */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.pop-up-btn {
+    /* Estilos para o botão do pop-up */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pop-up-btn button {
+    /* Estilos para o botão do pop-up */
+    width: 230px;
+    height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #ffc506;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    transition: all 400ms ease-in;
+}
+
+.pop-up-btn button:hover {
+    /* Estilos para o botão do pop-up ao passar o mouse */
+    border: 1px solid #ffc506;
+    background-color: transparent;
+    color: #ffc506;
+}
+
+.finalizar button {
+    /* Estilos para o botão de finalizar */
+    width: 230px;
+    height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #ffc506;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    transition: all 400ms ease-in;
+    margin: 0 auto;
+}
+
+.finalizar button:hover {
+    /* Estilos para o botão de finalizar ao passar o mouse */
+    border: 1px solid #ffc506;
+    background-color: transparent;
+    color: #ffc506;
+}
+
+.finalizar {
+    /* Estilos para a seção de finalizar */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 480px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contatos {
+    /* Estilos para a seção de contatos */
+    width: 100%;
+    background-color: #1f1e1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: Center;
+    align-items: center;
+    font-size: 27px;
+    color: white;
+    padding-bottom: 60px;
+}
+
+.contatos h3 {
+    /* Estilos para o título da seção de contatos */
+    font-size: 90px;
+    margin-bottom: 45px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.contatos-secao {
+    /* Estilos para a seção de contatos */
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 21px;
+}
+
+.contatos-secao i {
+    /* Estilos para os ícones da seção de contatos */
+    margin-right: 15px;
+}
+
+.contatos-secao div {
+    /* Estilos para os elementos de contatos da seção */
+    cursor: pointer;
+}
+
+.contatos-secao div:hover {
+    /* Estilos para os elementos de contatos da seção ao passar o mouse */
+    color: #ffc506;
+}
+
+footer {
+    /* Estilos para o rodapé */
+    height: 25px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+    /* Estilos para telas com largura máxima de 850px */
+    .content .list-menu {
+        display: none;
+    }
+
+    .content {
+        height: 80px;
+        position: absolute;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo h3 {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .first-section .conteudo-principal {
+        text-align: center;
+    }
+
+    .main {
+        display: block;
+    }
+
+    .main img {
+        margin: 0 auto;
+        width: 100%;
+        margin-top: 30px;
+    }
+}

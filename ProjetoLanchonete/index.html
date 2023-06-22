@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu-style.css"> <!-- Inclusão do arquivo de estilo CSS externo -->
+    <script src="https://kit.fontawesome.com/3df637a2f2.js"></script> <!-- Inclusão do script JavaScript externo -->
+    <script src="js/script-menu.js"></script> <!-- Inclusão do script JavaScript externo -->
+
+    <title>Lanches & Cia</title>
+</head>
+
+<header>
+    <!-- Cabeçalho do site -->
+    <div class="content">
+        <div class="logo">
+            <img src="./img/LogLanche.jpg" alt="Cupcake">
+            <h3>Lanches & Cia</h3>
+        </div>
+        <ul class="list-menu">
+            <!-- Lista de atalhos para as seções do site -->
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobrenos">Sobre nós</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+    </div>
+</header>
+
+
+<section class="first-section" id="home">
+    <!-- Seção principal do site -->
+    <div class="conteudo-principal">
+        <h1>Sabores em Boa Companhia!!!</h1>
+        <h2>A lanchonete mais Saborosa da Região</h2>
+        <div class="btn">
+            <button class="cadastrar" onclick="openCadastroPage()">Realize seu Cadastro!</button>
+        </div>
+    </div>
+</section>
+
+<section class="sobre-nos" id="sobrenos">
+    <!-- Seção onde será contado um pouco sobre o que é nossa lanchonete -->
+    <div class="main">
+        <div class="contentsobre">
+            <h2>Sobre nós</h2>
+            <p>Sua lanchonete online de salgados deliciosos e bebidas refrescantes. Praticidade e sabor em cada
+                pedido.
+                Faça seu pedido em nosso site e desfrute da melhor experiência gastronômica onde quer que você
+                esteja.
+                Experimente nossas combinações únicas e deixe seu paladar encantado.</p>
+        </div>
+        <div class="img-cozinha">
+            <img src="./img/Lanchonete.png" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="cardapio" id="cardapio">
+    <!-- Cardápio da lanchonete -->
+    <h2>Cardápio</h2>
+
+    <div class="itens-cardapio">
+        <div class="hamburger">
+            <img src="./img/hamburger.png" alt="hamburger">
+            <div class="info">
+                <h3>Hamburger</h3>
+                <select id="opcoes-hamburger">
+                    <option value="1-carne">1 carne - R$20,00</option>
+                    <option value="2-carnes">2 carnes - R$30,00</option>
+                </select>
+                <button type="button" class="pedir" onclick="adicionarAoCarrinho('Hamburger')">pedir agora</button>
+            </div>
+        </div>
+
+        <div class="misto-quente">
+            <img src="./img/misto-quente.png" alt="misto-quente">
+            <div class="info">
+                <h3>Misto-Quente</h3>
+                <select id="opcoes-misto-quente">
+                    <option value="pao-frances">Pão Francês - R$5,00</option>
+                    <option value="pao-de-forma">Pão de Forma - R$7,00</option>
+                </select>
+                <button type="button" class="pedir" onclick="adicionarAoCarrinho('Misto-Quente')">pedir
+                    agora</button>
+            </div>
+        </div>
+
+        <div class="lanche-natural">
+            <img src="./img/lanchenatural.png" alt="lanche-natural">
+            <div class="info">
+                <h3>Lanche Natural</h3>
+                <select id="opcoes-lanche-natural">
+                    <option value="sem-frango">Sem Frango - R$8,00</option>
+                    <option value="com-frango">Com Frango - R$10,00</option>
+                </select>
+                <button type="button" class="pedir" onclick="adicionarAoCarrinho('Lanche Natural')">pedir
+                    agora</button>
+            </div>
+        </div>
+
+        <div class="coxinha">
+            <img src="./img/coxinha.png" alt="coxinha">
+            <div class="info">
+                <h3>Coxinha</h3>
+                <select id="opcoes-coxinha">
+                    <option value="sem-catupiry">Sem Catupiry - R$5,00</option>
+                    <option value="com-catupiry">Com Catupiry - R$7,00</option>
+                </select>
+                <button type="button" class="pedir" onclick="adicionarAoCarrinho('Coxinha')">pedir agora</button>
+            </div>
+        </div>
+
+        <div class="pizza-enrolada">
+            <img src="./img/pizza-enrolada.png" alt="pizza-enrolada">
+            <div class="info">
+                <h3>Pizza Enrolada</h3>
+                <select id="opcoes-pizza-enrolada">
+                    <option value="sem-catupiry">Sem Catupiry - R$5,00</option>
+                    <option value="com-catupiry">Com Catupiry - R$7,00</option>
+                </select>
+                <button type="button" class="pedir" onclick="adicionarAoCarrinho('Pizza Enrolada')">pedir
+                    agora</button>
+            </div>
+        </div>
+
+        <div class="bebidas">
+            <img src="./img/bebidas.png" alt="bebidas">
+            <div class="info">
+                <h3>Bebidas</h3>
+                <select id="opcoes-bebidas">
+                    <option value="agua">Água - R$6,00</option>
+                    <option value="suco-natural">Suco Natural - R$6,00</option>
+                    <option value="refrigerante">Refrigerante - R$7,00</option>
+                    <option value="cerveja">Cerveja - R$12,00</option>
+                </select>
+                <button type="button" class="pedir" onclick="adicionarAoCarrinho('Bebidas')">pedir agora</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Seção onde sera mostrado Carrinho da pagina -->
+<section class="carrinho" id="carrinho">
+    <h2>Carrinho</h2>
+    <ul id="lista-carrinho">
+    </ul>
+    <div class="total">
+        <span>Total:</span>
+        <span id="total-carrinho">R$0.00</span>
+        <br>
+        <div class="finalizar">
+            <button onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+</section>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="fecharPopup()">&times;</span>
+        <h2>Obrigado por realizar a compra!</h2>
+        <p id="mensagemPopup"></p>
+        <div class="pop-up-btn">
+            <button onclick="metodoPag('pix')" style="margin-right: 20px;">PIX</button>
+            <button onclick="metodoPag('dinheiro')" style="margin-right: 20px;">Dinheiro</button>
+            <button onclick="metodoPag('cartao')" style="margin-right: 20px;">Cartão</button>
+        </div>
+    </div>
+</div>
+
+
+<section class="contatos" id="contatos">
+    <!-- Seção para contatos da lanchonete -->
+    <h3>Contatos</h3>
+    <div class="contatos-secao">
+        <div>
+            <i class="fas fa-phone"></i>
+            <span>(12) 98231-1253</span>
+        </div>
+        <div>
+            <i class="fab fa-instagram"></i>
+            <span>@Lanches&Cia</span>
+        </div>
+        <div>
+            <i class="fab fa-facebook-f"></i>
+            <span>Lanches & Cia</span>
+        </div>
+    </div>
+</section>
+<!-- Seção que mostra o rodapé da lanchonete -->
+<footer>
+    <h4>&copy - Todos os Direitos Reservados - Lanches & Cia - 2023</h4>
+</footer>
+
+
+</body>
+
+</html>
